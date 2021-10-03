@@ -1,25 +1,51 @@
 #include<iostream>
+#include<math.h>
+#include<string>
+#include<conio.h>
 
 using namespace std;
 
-int main()
-{	
-	cout << "Enter a number" <<endl;
-	int n;
-	cin >> n;
+int binarySearch(int array[], int n, int key)
+{
+    int s = 0;
+    int e = n;
+    while (s<= e)
+    {
+        int mid = (s+e)/2;
 
-	for(int i = 1; i <=n; i++)
-	{
-		for(int j = 1; j <= n-i; j++)
-		{
-			cout << " ";
-		}
-		for (int j = 1; j <= n; j++)
-		{
-			cout << "*" ;
-		}
-		
-		cout << endl;
-	}
-	return 0;
+        if (array[mid]==key)
+        {
+            return mid;
+        }
+        else if (array[mid]>key)
+        {
+            e=mid-1;
+        }
+        else
+        {
+            s=mid+1;
+        }
+               
+        
+    }
+     return -1;
+}
+
+int main()
+{
+    int n;
+     cin >> n;
+
+     int array[n];
+
+     for(int i = 0; i < n; i++)
+     {
+         cin >> array[i];
+     }
+
+     int key;
+     cin >> key;
+
+     cout << binarySearch(array, n, key);
+
 }
