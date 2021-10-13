@@ -31,40 +31,74 @@ using namespace std;
 //      return -1;
 // }
 
-int main()
-{
-    int n;
-     cin >> n;
+// int main()
+// {
+//     int n;
+//      cin >> n;
 
-     int array[n];
+//      int array[n];
 
-     for(int i = 0; i < n; i++)
-     {
-         cin >> array[i];
-     }
+//      for(int i = 0; i < n; i++)
+//      {
+//          cin >> array[i];
+//      }
 
-     int counter =1;
+//      int counter =1;
 
-    while (counter<n)
-    {
-       for (int i = 0; i < n-counter; i++)
-       {
-           if (array[i]> array[i+1])        
-           {
-               int temp = array[i];
-               array[i] = array[i+1];
-                array[i+1] = temp;
-            }
+//     while (counter<n)
+//     {
+//        for (int i = 0; i < n-counter; i++)
+//        {
+//            if (array[i]> array[i+1])        
+//            {
+//                int temp = array[i];
+//                array[i] = array[i+1];
+//                 array[i+1] = temp;
+//             }
            
-       }
-       counter++;
+//        }
+//        counter++;
         
-    }
+//     }
 
-    for (int i = 0; i < n; i++)
-    {
-        cout << array[i] << "";
-    } 
-     cout  <<endl;
-    return 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << array[i] << "";
+//     } 
+//      cout  <<endl;
+//     return 0;
+// }
+
+class Student{
+public:
+    string name;
+    string section;
+    int year;
+    int age;
+    int height;
+    int weight;
+
+    Student(string q, string w, int e, int r, int t, int y){
+        name=q;
+        section=w;
+        year=e;
+        age=r;
+        height=t;
+        weight=y;
+        }
+
+void Abilities(){
+    cout<< "He/She is a very smart and speedy student";
+    cout<< "Name"<< name<<endl;
+    cout<< "Section"<< section <<endl;
+    cout<< "Year"<< year <<endl;
+    cout<< "Age"<< age <<endl;
+    cout<< "Height"<< height <<endl;
+    cout<< "Weight"<< weight<<endl;
+}
+};
+
+int main(){
+    Student student_1("Reena","A",2,20,170,60);
+    student_1.Abilities();
 }
