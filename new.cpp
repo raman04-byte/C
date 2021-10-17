@@ -102,17 +102,18 @@
 //     Student student_1("Reena","A",2,20,170,60);
 //     student_1.Abilities();
 // }
-#include<iostream>
-#include<cstdlib>
-#include<string>
-#include<conio.h>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <string>
+#include <conio.h>
 
 using namespace std;
 
 int main()
 {
-    srand(67);
-    for (int j = 0; j < 25; j++)
+    srand(time(0));
+    for (int j = 0; j < 5; j++)
     {
         cout << 1+(rand()%6) <<endl;
     }
